@@ -21,7 +21,7 @@ pipeline {
                   sh "mvn package"
             }
         }
-        stage('Package') {
+        stage('Deploy') {
             steps {
                  deploy contextPath: '/opt/tomcast/webapps', war: '/home/ubuntu/.jenkins/workspace/job-1/target/*war'
             }
