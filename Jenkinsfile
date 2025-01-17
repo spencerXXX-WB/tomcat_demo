@@ -3,7 +3,7 @@ pipeline {
       tools {
         jdk 'jdk17'
         maven 'maven'
-    } 
+    }
 
     stages {
          stage('Complie') {
