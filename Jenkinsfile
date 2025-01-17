@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                 deploy contextPath: '/opt/tomcast/webapps', war: '/home/ubuntu/.jenkins/workspace/job-1/target/*war'
+              deploy adapters: [tomcat9(path: '', url: 'http://54.227.178.17:8080/')], contextPath: 'spencer', onFailure: false, war: 'target/*war'
             }
         }
     }
